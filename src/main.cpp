@@ -1,6 +1,6 @@
 #include <main.h>
-#include <conductivity.h>
-#include <acidity.h>
+
+
 
 int deviceCount = 0;
 float tempC;
@@ -11,6 +11,7 @@ void setup(void)
   initTemperature();
   initConductivity();
   initAcidity();
+  initStorage();
   //calibConductivity();
   //calibAcidity();
 }

@@ -43,12 +43,15 @@ DFRobot_EC10::~DFRobot_EC10()
 
 void DFRobot_EC10::begin()
 {
+  /*
     EEPROM_read(KVALUEADDR, this->_kvalue);  //read the calibrated K value from EEPROM
     if((EEPROM.read(KVALUEADDR)==0xFF && EEPROM.read(KVALUEADDR+1)==0xFF && EEPROM.read(KVALUEADDR+2)==0xFF && EEPROM.read(KVALUEADDR+3)==0xFF)||(this->_kvalue>100)||(this->_kvalue<0.01))
     {
       this->_kvalue = 1.0;
       EEPROM_write(KVALUEADDR, this->_kvalue);
     }
+    */
+    this->_kvalue = 0.17; //force the kvalue
     Serial.print("_kvalue:");
     Serial.println(this->_kvalue);
 }
@@ -156,7 +159,7 @@ void DFRobot_EC10::ecCalibration(byte mode)
       case 2:
       if(enterCalibrationFlag)
       {
-          if((this->_ecvalueRaw>6)&&(this->_ecvalueRaw<18))  //recognize 12.88ms/cm buffer solution
+          if((this->_ecvalueRaw>6)&&(this->_ecvalueRaw<120))  //recognize 12.88ms/cm buffer solution
           {
             rawECsolution = 12.9*(1.0+0.0185*(this->_temperature-25.0));  //temperature compensation
           }
@@ -168,7 +171,7 @@ void DFRobot_EC10::ecCalibration(byte mode)
           KValueTemp = RES2*ECREF*rawECsolution/1000.0/this->_voltage/10.0;  //calibrate the k value
           //Serial.print("Kvaluetemp");
           //Serial.println(KValueTemp);
-          if((KValueTemp>0.5) && (KValueTemp<1.5))
+          if((KValueTemp>0.0) && (KValueTemp<15))
           {
               Serial.println();
               Serial.print(F(">>>Successful,K:"));

@@ -2,7 +2,7 @@
 #include <DFRobot_EC10.h>
 #include <EEPROM.h>
 #include <temperature.h>
-
+// k = 0.17 (13-05-22)
 DFRobot_EC10 ec;
 float conductivity;
 
