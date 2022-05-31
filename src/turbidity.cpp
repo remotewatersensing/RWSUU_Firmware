@@ -2,14 +2,21 @@
 
 uint16_t turbidity;
 
+/**
+ * @brief Retrieves the turbidity value
+ * @return float turbidity in NTU
+ */
 uint16_t getTurbidity(void)
 {   
-    float v = analogRead(turbidityPin) * (5.0 / 1024.0);
-    turbidity = (v<2.5) ? 3000 : -1120.4*square(v)+ 5742.3*v - 4352.9;
+    float v = V(analogRead(turbidityPin));
+    
+    //See chart at https://wiki.dfrobot.com/Turbidity_sensor_SKU__SEN0189
+    if(turbidity<=4.5){turbidity = (4.5-v)*1500.0;} else {turbidity = 0;}
+    
 #ifdef DEBUG
-    Serial.print("Turbidity\tV:");
+    Serial.print(F("Turbidity\tV:"));
     Serial.print(v);
-    Serial.print("\tNTU: ");
+    Serial.print(F("\tNTU: "));
     Serial.println(turbidity);
 #endif
     return turbidity;

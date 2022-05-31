@@ -20,6 +20,8 @@
 #endif
 
 #define ReceivedBufferLength 10  //length of the Serial CMD buffer
+#define conductivityK 0.17
+
 
 class DFRobot_EC10
 {

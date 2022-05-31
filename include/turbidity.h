@@ -1,3 +1,9 @@
+/**
+ * @file turbidity.h
+ * @author Robin Westerik
+ * @brief Interface for turbidity sensor
+ */
+
 #include <Arduino.h>
 #include <defines.h>
 

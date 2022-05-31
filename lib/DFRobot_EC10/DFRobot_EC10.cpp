@@ -51,7 +51,7 @@ void DFRobot_EC10::begin()
       EEPROM_write(KVALUEADDR, this->_kvalue);
     }
     */
-    this->_kvalue = 0.17; //force the kvalue
+    this->_kvalue = conductivityK; //force the kvalue
     Serial.print("_kvalue:");
     Serial.println(this->_kvalue);
 }

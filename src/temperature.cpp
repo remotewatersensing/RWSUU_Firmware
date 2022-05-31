@@ -4,16 +4,21 @@ OneWire oneWire(temperaturePin);
 DallasTemperature sensors(&oneWire);
 float temperature;
 
+/** @brief Initializes the temperature sensor */
 void initTemperature()
 {
     sensors.begin();
 #ifdef DEBUG
     uint8_t deviceCount = sensors.getDeviceCount();
-    Serial.print("Sensors found on OneWire: ");
+    Serial.print(F("Sensors found on OneWire: "));
     Serial.print(deviceCount, DEC);
 #endif
 }
 
+/**
+ * @brief Retrieves the temperature value
+ * @return float temperature in C
+ */
 float getTemperature()
 {
     sensors.requestTemperatures(); 
@@ -22,12 +27,12 @@ float getTemperature()
 #ifdef DEBUG
     if(temperature == DEVICE_DISCONNECTED_C)
     {
-        Serial.println("Temperature sensor not connected");
+        Serial.println(F("Temperature sensor not connected"));
     } else
     {
-        Serial.print("Temperature\t");
+        Serial.print(F("Temperature\t"));
         Serial.print(temperature);
-        Serial.println("°C");
+        Serial.println(F("°C"));
     }
 #endif
 
