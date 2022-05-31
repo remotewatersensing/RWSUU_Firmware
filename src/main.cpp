@@ -7,7 +7,7 @@
 void setup(void)
 {
   Serial.begin(9600);
-  while (!Serial) ; // wait for serial
+  while (!Serial) {}; // wait for serial
   initTemperature();
   initConductivity();
   initAcidity();

@@ -41,7 +41,7 @@ void errorRTC(void)
 */
 bool writeRTC(void) 
 {
-  if (RTC.write(tm)) return true;
+  if (RTC.write(tm)) {return true};
   else 
   {
     errorRTC();
@@ -55,7 +55,7 @@ bool writeRTC(void)
  */
 bool readRTC(void) 
 {
-  if (RTC.read(tm)) return true;
+  if (RTC.read(tm)) {return true};
   else 
   {
     errorRTC();
@@ -71,9 +71,9 @@ bool readRTC(void)
  */
 bool setTime(const char *str)
 {
-  int Hour, Min, Sec;
+  int Hour;int Min;int Sec;
 
-  if (sscanf(str, "%d:%d:%d", &Hour, &Min, &Sec) != 3) return false;
+  if (sscanf(str, "%d:%d:%d", &Hour, &Min, &Sec) != 3) {return false};
   tm.Hour = Hour;
   tm.Minute = Min;
   tm.Second = Sec;
@@ -89,14 +89,14 @@ bool setTime(const char *str)
 bool setDate(const char *str)
 {
   char Month[12];
-  int Day, Year;
+  int Day;int Year;
   uint8_t monthIndex;
 
-  if (sscanf(str, "%s %d %d", Month, &Day, &Year) != 3) return false;
+  if (sscanf(str, "%s %d %d", Month, &Day, &Year) != 3) {return false};
   for (monthIndex = 0; monthIndex < 12; monthIndex++) {
     if (strcmp(Month, monthName[monthIndex]) == 0) break;
   }
-  if (monthIndex >= 12) return false;
+  if (monthIndex >= 12) {return false};
   tm.Day = Day;
   tm.Month = monthIndex + 1;
   tm.Year = CalendarYrToTm(Year);
@@ -114,6 +114,6 @@ bool initRTC()
   bool dateSet = setDate(__DATE__);
   bool timeSet = setTime(__TIME__);
   bool rtcWritten = false;
-  if(dateSet&&timeSet) rtcWritten = writeRTC();
+  if(dateSet&&timeSet) {rtcWritten = writeRTC()};
   return (rtcWritten);
 }
