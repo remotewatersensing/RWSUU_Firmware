@@ -26,7 +26,7 @@ struct data {
 bool initSD()
 {
   pinMode(SDCSPin, OUTPUT);
-  if(SD.begin(SDCSPin)) {return true};
+  if(SD.begin(SDCSPin)) {return true;}
   else
   {
     Serial.println(F("SD: not detected"));
