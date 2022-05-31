@@ -1,0 +1,65 @@
+\hypertarget{temperature_8h}{}\doxysection{include/temperature.h File Reference}
+\label{temperature_8h}\index{include/temperature.h@{include/temperature.h}}
+
+
+Interface for temperature sensor.  
+
+
+{\ttfamily \#include $<$One\+Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dallas\+Temperature.\+h$>$}\newline
+{\ttfamily \#include $<$defines.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{temperature_8h_ae34e6143548af43e5b74ab563262798b}{init\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the temperature sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{temperature_8h_a7bc8fec1dc1e024c1270c3c798f12ea4}{get\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the temperature value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{temperature_8h_afc1d28cfbce795d6ea954ebe725241f5}{temperature}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for temperature sensor. 
+
+\begin{DoxyAuthor}{Author}
+Robin Westerik 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{temperature_8h_a7bc8fec1dc1e024c1270c3c798f12ea4}\label{temperature_8h_a7bc8fec1dc1e024c1270c3c798f12ea4}} 
+\index{temperature.h@{temperature.h}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily float get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the temperature value. 
+
+\begin{DoxyReturn}{Returns}
+float temperature in C 
+\end{DoxyReturn}
+\mbox{\Hypertarget{temperature_8h_ae34e6143548af43e5b74ab563262798b}\label{temperature_8h_ae34e6143548af43e5b74ab563262798b}} 
+\index{temperature.h@{temperature.h}!initTemperature@{initTemperature}}
+\index{initTemperature@{initTemperature}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{initTemperature()}{initTemperature()}}
+{\footnotesize\ttfamily void init\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the temperature sensor. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{temperature_8h_afc1d28cfbce795d6ea954ebe725241f5}\label{temperature_8h_afc1d28cfbce795d6ea954ebe725241f5}} 
+\index{temperature.h@{temperature.h}!temperature@{temperature}}
+\index{temperature@{temperature}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily float temperature\hspace{0.3cm}{\ttfamily [extern]}}
+

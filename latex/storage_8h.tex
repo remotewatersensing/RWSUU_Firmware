@@ -1,0 +1,75 @@
+\hypertarget{storage_8h}{}\doxysection{include/storage.h File Reference}
+\label{storage_8h}\index{include/storage.h@{include/storage.h}}
+
+
+Allows for saving files on the SD card.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$defines.\+h$>$}\newline
+{\ttfamily \#include $<$rtc.\+h$>$}\newline
+{\ttfamily \#include $<$led.\+h$>$}\newline
+{\ttfamily \#include $<$SD.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{storage_8h_a12027713ca0b03891436c4526266f594}{init\+SD}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the SD card. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{storage_8h_a07e442e91a72c02f7354b31136d43b4f}{create\+File}} ()
+\begin{DoxyCompactList}\small\item\em Create a new file with a new filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{storage_8h_a622ab97643859a9bb5887adb13cbd732}{log\+File}} (uint8\+\_\+t id, float val)
+\begin{DoxyCompactList}\small\item\em Log data with timestamp to opened file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows for saving files on the SD card. 
+
+\begin{DoxyAuthor}{Author}
+Robin Westerik 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{storage_8h_a07e442e91a72c02f7354b31136d43b4f}\label{storage_8h_a07e442e91a72c02f7354b31136d43b4f}} 
+\index{storage.h@{storage.h}!createFile@{createFile}}
+\index{createFile@{createFile}!storage.h@{storage.h}}
+\doxysubsubsection{\texorpdfstring{createFile()}{createFile()}}
+{\footnotesize\ttfamily bool create\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new file with a new filename. 
+
+\begin{DoxyReturn}{Returns}
+if file has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{storage_8h_a12027713ca0b03891436c4526266f594}\label{storage_8h_a12027713ca0b03891436c4526266f594}} 
+\index{storage.h@{storage.h}!initSD@{initSD}}
+\index{initSD@{initSD}!storage.h@{storage.h}}
+\doxysubsubsection{\texorpdfstring{initSD()}{initSD()}}
+{\footnotesize\ttfamily bool init\+SD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the SD card. 
+
+\begin{DoxyReturn}{Returns}
+if SD has been successfully initialized 
+\end{DoxyReturn}
+\mbox{\Hypertarget{storage_8h_a622ab97643859a9bb5887adb13cbd732}\label{storage_8h_a622ab97643859a9bb5887adb13cbd732}} 
+\index{storage.h@{storage.h}!logFile@{logFile}}
+\index{logFile@{logFile}!storage.h@{storage.h}}
+\doxysubsubsection{\texorpdfstring{logFile()}{logFile()}}
+{\footnotesize\ttfamily void log\+File (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Log data with timestamp to opened file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the sensor id (see \mbox{\hyperlink{defines_8h}{defines.\+h}}) \\
+\hline
+{\em val} & the sensor value \\
+\hline
+\end{DoxyParams}

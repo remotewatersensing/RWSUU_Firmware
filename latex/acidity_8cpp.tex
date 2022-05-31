@@ -1,0 +1,92 @@
+\hypertarget{acidity_8cpp}{}\doxysection{src/acidity.cpp File Reference}
+\label{acidity_8cpp}\index{src/acidity.cpp@{src/acidity.cpp}}
+{\ttfamily \#include $<$acidity.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{acidity_8cpp_abcb086c78a3ef3a5a7e5fde2d20957b8}{init\+Acidity}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the acidity sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{acidity_8cpp_aea28cbfab48435d841da00b091c0d3d2}{get\+Acidity}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the acidity value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{acidity_8cpp_a31a892435a73143270ad68ab0e3de588}{clear\+Calib\+Acidity}} ()
+\begin{DoxyCompactList}\small\item\em Removes the acidity calibration from the EEPROM. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{acidity_8cpp_a05dc46c2c51b6f3a1630832f4355ad3c}{calib\+Acidity}} ()
+\begin{DoxyCompactList}\small\item\em Calibrates the acidity sensor Blocking function which takes control of the serial interface, printing out the temperature and pH repeatedly. Calibrates and saves the values on the EEPROM. To calibrate, connect the MCU with a serial monitor. The following steps should be taken in sequence\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+DFRobot\+\_\+\+PH \mbox{\hyperlink{acidity_8cpp_a705d861b38242c2235334db0085a0f46}{ph}}
+\item 
+float \mbox{\hyperlink{acidity_8cpp_a550cbcc03997280e2d00391f7b8ea0a3}{acidity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{acidity_8cpp_a05dc46c2c51b6f3a1630832f4355ad3c}\label{acidity_8cpp_a05dc46c2c51b6f3a1630832f4355ad3c}} 
+\index{acidity.cpp@{acidity.cpp}!calibAcidity@{calibAcidity}}
+\index{calibAcidity@{calibAcidity}!acidity.cpp@{acidity.cpp}}
+\doxysubsubsection{\texorpdfstring{calibAcidity()}{calibAcidity()}}
+{\footnotesize\ttfamily float calib\+Acidity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Calibrates the acidity sensor Blocking function which takes control of the serial interface, printing out the temperature and pH repeatedly. Calibrates and saves the values on the EEPROM. To calibrate, connect the MCU with a serial monitor. The following steps should be taken in sequence\+: 
+
+
+\begin{DoxyEnumerate}
+\item Make sure the sensor is not submerged
+\item Send\+: enterph
+\item Put your sensor in distilled water with a pH of 7
+\item Send\+: calph
+\item If it returns a success, send\+: exitec If it fails, try again Repeat the steps in water with a pH of 4 \begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{acidity_8cpp_a31a892435a73143270ad68ab0e3de588}\label{acidity_8cpp_a31a892435a73143270ad68ab0e3de588}} 
+\index{acidity.cpp@{acidity.cpp}!clearCalibAcidity@{clearCalibAcidity}}
+\index{clearCalibAcidity@{clearCalibAcidity}!acidity.cpp@{acidity.cpp}}
+\doxysubsubsection{\texorpdfstring{clearCalibAcidity()}{clearCalibAcidity()}}
+{\footnotesize\ttfamily void clear\+Calib\+Acidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the acidity calibration from the EEPROM. 
+
+\mbox{\Hypertarget{acidity_8cpp_aea28cbfab48435d841da00b091c0d3d2}\label{acidity_8cpp_aea28cbfab48435d841da00b091c0d3d2}} 
+\index{acidity.cpp@{acidity.cpp}!getAcidity@{getAcidity}}
+\index{getAcidity@{getAcidity}!acidity.cpp@{acidity.cpp}}
+\doxysubsubsection{\texorpdfstring{getAcidity()}{getAcidity()}}
+{\footnotesize\ttfamily float get\+Acidity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the acidity value. 
+
+\begin{DoxyReturn}{Returns}
+float acidity in pH 
+\end{DoxyReturn}
+\mbox{\Hypertarget{acidity_8cpp_abcb086c78a3ef3a5a7e5fde2d20957b8}\label{acidity_8cpp_abcb086c78a3ef3a5a7e5fde2d20957b8}} 
+\index{acidity.cpp@{acidity.cpp}!initAcidity@{initAcidity}}
+\index{initAcidity@{initAcidity}!acidity.cpp@{acidity.cpp}}
+\doxysubsubsection{\texorpdfstring{initAcidity()}{initAcidity()}}
+{\footnotesize\ttfamily void init\+Acidity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the acidity sensor. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{acidity_8cpp_a550cbcc03997280e2d00391f7b8ea0a3}\label{acidity_8cpp_a550cbcc03997280e2d00391f7b8ea0a3}} 
+\index{acidity.cpp@{acidity.cpp}!acidity@{acidity}}
+\index{acidity@{acidity}!acidity.cpp@{acidity.cpp}}
+\doxysubsubsection{\texorpdfstring{acidity}{acidity}}
+{\footnotesize\ttfamily float acidity}
+
+\mbox{\Hypertarget{acidity_8cpp_a705d861b38242c2235334db0085a0f46}\label{acidity_8cpp_a705d861b38242c2235334db0085a0f46}} 
+\index{acidity.cpp@{acidity.cpp}!ph@{ph}}
+\index{ph@{ph}!acidity.cpp@{acidity.cpp}}
+\doxysubsubsection{\texorpdfstring{ph}{ph}}
+{\footnotesize\ttfamily DFRobot\+\_\+\+PH ph}
+

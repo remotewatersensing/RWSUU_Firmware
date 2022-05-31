@@ -1,0 +1,89 @@
+\hypertarget{acidity_8h}{}\doxysection{include/acidity.h File Reference}
+\label{acidity_8h}\index{include/acidity.h@{include/acidity.h}}
+
+
+Interface for acidity sensor.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$defines.\+h$>$}\newline
+{\ttfamily \#include $<$DFRobot\+\_\+\+PH.\+h$>$}\newline
+{\ttfamily \#include $<$EEPROM.\+h$>$}\newline
+{\ttfamily \#include $<$temperature.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{acidity_8h_a5f1e7c9dd6be44d8ec0e605c131951ae}{init\+Acidity}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the acidity sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{acidity_8h_a70db8ecb7937a442b467c99326bb6cc9}{calib\+Acidity}} (void)
+\begin{DoxyCompactList}\small\item\em Calibrates the acidity sensor Blocking function which takes control of the serial interface, printing out the temperature and pH repeatedly. Calibrates and saves the values on the EEPROM. To calibrate, connect the MCU with a serial monitor. The following steps should be taken in sequence\+: \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{acidity_8h_aa6b4bd2fc344691a3e1a8f52f3bf70c7}{get\+Acidity}} (void)
+\begin{DoxyCompactList}\small\item\em Retrieves the acidity value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{acidity_8h_a550cbcc03997280e2d00391f7b8ea0a3}{acidity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for acidity sensor. 
+
+\begin{DoxyAuthor}{Author}
+Robin Westerik 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{acidity_8h_a70db8ecb7937a442b467c99326bb6cc9}\label{acidity_8h_a70db8ecb7937a442b467c99326bb6cc9}} 
+\index{acidity.h@{acidity.h}!calibAcidity@{calibAcidity}}
+\index{calibAcidity@{calibAcidity}!acidity.h@{acidity.h}}
+\doxysubsubsection{\texorpdfstring{calibAcidity()}{calibAcidity()}}
+{\footnotesize\ttfamily float calib\+Acidity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Calibrates the acidity sensor Blocking function which takes control of the serial interface, printing out the temperature and pH repeatedly. Calibrates and saves the values on the EEPROM. To calibrate, connect the MCU with a serial monitor. The following steps should be taken in sequence\+: 
+
+
+\begin{DoxyEnumerate}
+\item Make sure the sensor is not submerged
+\item Send\+: enterph
+\item Put your sensor in distilled water with a pH of 7
+\item Send\+: calph
+\item If it returns a success, send\+: exitec If it fails, try again Repeat the steps in water with a pH of 4 \begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{acidity_8h_aa6b4bd2fc344691a3e1a8f52f3bf70c7}\label{acidity_8h_aa6b4bd2fc344691a3e1a8f52f3bf70c7}} 
+\index{acidity.h@{acidity.h}!getAcidity@{getAcidity}}
+\index{getAcidity@{getAcidity}!acidity.h@{acidity.h}}
+\doxysubsubsection{\texorpdfstring{getAcidity()}{getAcidity()}}
+{\footnotesize\ttfamily float get\+Acidity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the acidity value. 
+
+\begin{DoxyReturn}{Returns}
+float acidity in pH 
+\end{DoxyReturn}
+\mbox{\Hypertarget{acidity_8h_a5f1e7c9dd6be44d8ec0e605c131951ae}\label{acidity_8h_a5f1e7c9dd6be44d8ec0e605c131951ae}} 
+\index{acidity.h@{acidity.h}!initAcidity@{initAcidity}}
+\index{initAcidity@{initAcidity}!acidity.h@{acidity.h}}
+\doxysubsubsection{\texorpdfstring{initAcidity()}{initAcidity()}}
+{\footnotesize\ttfamily void init\+Acidity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the acidity sensor. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{acidity_8h_a550cbcc03997280e2d00391f7b8ea0a3}\label{acidity_8h_a550cbcc03997280e2d00391f7b8ea0a3}} 
+\index{acidity.h@{acidity.h}!acidity@{acidity}}
+\index{acidity@{acidity}!acidity.h@{acidity.h}}
+\doxysubsubsection{\texorpdfstring{acidity}{acidity}}
+{\footnotesize\ttfamily float acidity\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,231 @@
+\hypertarget{rtc_8cpp}{}\doxysection{src/rtc.cpp File Reference}
+\label{rtc_8cpp}\index{src/rtc.cpp@{src/rtc.cpp}}
+{\ttfamily \#include $<$rtc.\+h$>$}\newline
+{\ttfamily \#include $<$led.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8cpp_a6eacf217a10e49ebc7c69f35166de7da}{get\+Day}} ()
+\begin{DoxyCompactList}\small\item\em Get the Day object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8cpp_af6189dde521536bad801a8b15bc4b382}{get\+Month}} ()
+\begin{DoxyCompactList}\small\item\em Get the Month object. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{rtc_8cpp_ae10acb70ac489f75b09042368987d2c2}{get\+Year}} ()
+\begin{DoxyCompactList}\small\item\em Get the Year object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8cpp_a813e20818b97bf9fff8e99d98130f91f}{get\+Hour}} ()
+\begin{DoxyCompactList}\small\item\em Get the Hour object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8cpp_af5f4fde550ced44e2b885b471e51b11c}{get\+Minute}} ()
+\begin{DoxyCompactList}\small\item\em Get the Minute object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8cpp_a850533e7af799a4886a433c6a1271ee9}{get\+Second}} ()
+\begin{DoxyCompactList}\small\item\em Get the Second object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8cpp_a33a6c93e353b65588fb001ba2665e1ad}{error\+RTC}} (void)
+\begin{DoxyCompactList}\small\item\em Notifies what is wrong with the RTC and get into the fatal error loop. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8cpp_adf982c8be0e610c5925531b39585d140}{write\+RTC}} (void)
+\begin{DoxyCompactList}\small\item\em Writes the time object to the RTC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8cpp_af4e96d9f22b0facc01508f7c9203812b}{read\+RTC}} (void)
+\begin{DoxyCompactList}\small\item\em Reads from the RTC and puts it in the tm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8cpp_a5dc98669c070fc02ffb06abf27c473fb}{set\+Time}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Set the tm from a time string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8cpp_ab4994f75899ef8811292f18c2c388621}{set\+Date}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Set the tm from a date string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8cpp_aaa76e4b8e5177426a2d666d35bd7d348}{init\+RTC}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the RTC Extract the date and time from the compiler and write it to the RTC if available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tm\+Elements\+\_\+t \mbox{\hyperlink{rtc_8cpp_a52357cbf68af66972047f7aed7a45218}{tm}}
+\item 
+const char $\ast$ \mbox{\hyperlink{rtc_8cpp_a9fce7af8b9842b4ab3b85327b1af13fc}{month\+Name}} \mbox{[}12\mbox{]}
+\begin{DoxyCompactList}\small\item\em days of the month \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8cpp_a33a6c93e353b65588fb001ba2665e1ad}\label{rtc_8cpp_a33a6c93e353b65588fb001ba2665e1ad}} 
+\index{rtc.cpp@{rtc.cpp}!errorRTC@{errorRTC}}
+\index{errorRTC@{errorRTC}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{errorRTC()}{errorRTC()}}
+{\footnotesize\ttfamily void error\+RTC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Notifies what is wrong with the RTC and get into the fatal error loop. 
+
+\mbox{\Hypertarget{rtc_8cpp_a6eacf217a10e49ebc7c69f35166de7da}\label{rtc_8cpp_a6eacf217a10e49ebc7c69f35166de7da}} 
+\index{rtc.cpp@{rtc.cpp}!getDay@{getDay}}
+\index{getDay@{getDay}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{getDay()}{getDay()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Day object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t calendar day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_a813e20818b97bf9fff8e99d98130f91f}\label{rtc_8cpp_a813e20818b97bf9fff8e99d98130f91f}} 
+\index{rtc.cpp@{rtc.cpp}!getHour@{getHour}}
+\index{getHour@{getHour}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{getHour()}{getHour()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Hour object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t hour 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_af5f4fde550ced44e2b885b471e51b11c}\label{rtc_8cpp_af5f4fde550ced44e2b885b471e51b11c}} 
+\index{rtc.cpp@{rtc.cpp}!getMinute@{getMinute}}
+\index{getMinute@{getMinute}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{getMinute()}{getMinute()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Minute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Minute object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t minute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_af6189dde521536bad801a8b15bc4b382}\label{rtc_8cpp_af6189dde521536bad801a8b15bc4b382}} 
+\index{rtc.cpp@{rtc.cpp}!getMonth@{getMonth}}
+\index{getMonth@{getMonth}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{getMonth()}{getMonth()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Month object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t calendar month 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_a850533e7af799a4886a433c6a1271ee9}\label{rtc_8cpp_a850533e7af799a4886a433c6a1271ee9}} 
+\index{rtc.cpp@{rtc.cpp}!getSecond@{getSecond}}
+\index{getSecond@{getSecond}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{getSecond()}{getSecond()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Second (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Second object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t second 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_ae10acb70ac489f75b09042368987d2c2}\label{rtc_8cpp_ae10acb70ac489f75b09042368987d2c2}} 
+\index{rtc.cpp@{rtc.cpp}!getYear@{getYear}}
+\index{getYear@{getYear}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily uint16\+\_\+t get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Year object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t calendar year 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_aaa76e4b8e5177426a2d666d35bd7d348}\label{rtc_8cpp_aaa76e4b8e5177426a2d666d35bd7d348}} 
+\index{rtc.cpp@{rtc.cpp}!initRTC@{initRTC}}
+\index{initRTC@{initRTC}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{initRTC()}{initRTC()}}
+{\footnotesize\ttfamily bool init\+RTC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the RTC Extract the date and time from the compiler and write it to the RTC if available. 
+
+\begin{DoxyReturn}{Returns}
+if RTC was able to extract a new date and time from the compiler 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_af4e96d9f22b0facc01508f7c9203812b}\label{rtc_8cpp_af4e96d9f22b0facc01508f7c9203812b}} 
+\index{rtc.cpp@{rtc.cpp}!readRTC@{readRTC}}
+\index{readRTC@{readRTC}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{readRTC()}{readRTC()}}
+{\footnotesize\ttfamily bool read\+RTC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads from the RTC and puts it in the tm. 
+
+\begin{DoxyReturn}{Returns}
+if no errors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_ab4994f75899ef8811292f18c2c388621}\label{rtc_8cpp_ab4994f75899ef8811292f18c2c388621}} 
+\index{rtc.cpp@{rtc.cpp}!setDate@{setDate}}
+\index{setDate@{setDate}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily bool set\+Date (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Set the tm from a date string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & date string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if parsed correctly 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_a5dc98669c070fc02ffb06abf27c473fb}\label{rtc_8cpp_a5dc98669c070fc02ffb06abf27c473fb}} 
+\index{rtc.cpp@{rtc.cpp}!setTime@{setTime}}
+\index{setTime@{setTime}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily bool set\+Time (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Set the tm from a time string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & time string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if parsed correctly 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8cpp_adf982c8be0e610c5925531b39585d140}\label{rtc_8cpp_adf982c8be0e610c5925531b39585d140}} 
+\index{rtc.cpp@{rtc.cpp}!writeRTC@{writeRTC}}
+\index{writeRTC@{writeRTC}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{writeRTC()}{writeRTC()}}
+{\footnotesize\ttfamily bool write\+RTC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Writes the time object to the RTC. 
+
+\begin{DoxyReturn}{Returns}
+if no errors 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8cpp_a9fce7af8b9842b4ab3b85327b1af13fc}\label{rtc_8cpp_a9fce7af8b9842b4ab3b85327b1af13fc}} 
+\index{rtc.cpp@{rtc.cpp}!monthName@{monthName}}
+\index{monthName@{monthName}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{monthName}{monthName}}
+{\footnotesize\ttfamily const char$\ast$ month\+Name\mbox{[}12\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Jan"{}}, \textcolor{stringliteral}{"{}Feb"{}}, \textcolor{stringliteral}{"{}Mar"{}}, \textcolor{stringliteral}{"{}Apr"{}}, \textcolor{stringliteral}{"{}May"{}}, \textcolor{stringliteral}{"{}Jun"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Jul"{}}, \textcolor{stringliteral}{"{}Aug"{}}, \textcolor{stringliteral}{"{}Sep"{}}, \textcolor{stringliteral}{"{}Oct"{}}, \textcolor{stringliteral}{"{}Nov"{}}, \textcolor{stringliteral}{"{}Dec"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+days of the month 
+
+\mbox{\Hypertarget{rtc_8cpp_a52357cbf68af66972047f7aed7a45218}\label{rtc_8cpp_a52357cbf68af66972047f7aed7a45218}} 
+\index{rtc.cpp@{rtc.cpp}!tm@{tm}}
+\index{tm@{tm}!rtc.cpp@{rtc.cpp}}
+\doxysubsubsection{\texorpdfstring{tm}{tm}}
+{\footnotesize\ttfamily tm\+Elements\+\_\+t tm}
+

@@ -1,0 +1,92 @@
+\hypertarget{conductivity_8cpp}{}\doxysection{src/conductivity.cpp File Reference}
+\label{conductivity_8cpp}\index{src/conductivity.cpp@{src/conductivity.cpp}}
+{\ttfamily \#include $<$conductivity.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{conductivity_8cpp_a5fb122419e7d12738cf0d9d1bed89b65}{init\+Conductivity}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the conductivity sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{conductivity_8cpp_af32a1e269f99455dc26a227d9384eff2}{get\+Conductivity}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the conductivity value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conductivity_8cpp_a38a100ccb06ed5e94d6090c42d2f4c3e}{clear\+Calib\+Conductivity}} ()
+\begin{DoxyCompactList}\small\item\em Removes the conductivity calibration from the EEPROM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conductivity_8cpp_a63035520c2c0cfc9a4bccb88fbc0f1dd}{calib\+Conductivity}} ()
+\begin{DoxyCompactList}\small\item\em Calibrates the conductivity sensor Blocking function which takes control of the serial interface, printing out the temperature and ms/cm repeatedly. Calibrates and saves the values on the EEPROM. To calibrate, connect the MCU with a serial monitor. The following steps should be taken in sequence\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+DFRobot\+\_\+\+EC10 \mbox{\hyperlink{conductivity_8cpp_a9b0cbf14fe27e711898c9bc24da8b4fa}{ec}}
+\item 
+float \mbox{\hyperlink{conductivity_8cpp_aa6393e463b3a2936a0bcecd122820671}{conductivity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{conductivity_8cpp_a63035520c2c0cfc9a4bccb88fbc0f1dd}\label{conductivity_8cpp_a63035520c2c0cfc9a4bccb88fbc0f1dd}} 
+\index{conductivity.cpp@{conductivity.cpp}!calibConductivity@{calibConductivity}}
+\index{calibConductivity@{calibConductivity}!conductivity.cpp@{conductivity.cpp}}
+\doxysubsubsection{\texorpdfstring{calibConductivity()}{calibConductivity()}}
+{\footnotesize\ttfamily void calib\+Conductivity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Calibrates the conductivity sensor Blocking function which takes control of the serial interface, printing out the temperature and ms/cm repeatedly. Calibrates and saves the values on the EEPROM. To calibrate, connect the MCU with a serial monitor. The following steps should be taken in sequence\+: 
+
+
+\begin{DoxyEnumerate}
+\item Make sure the sensor is not submerged
+\item Send\+: enterec
+\item Put your sensor in a 12.\+88ms/cm solution
+\item Send\+: calec
+\item If it returns a success, send\+: exitec If it fails, try again \begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{conductivity_8cpp_a38a100ccb06ed5e94d6090c42d2f4c3e}\label{conductivity_8cpp_a38a100ccb06ed5e94d6090c42d2f4c3e}} 
+\index{conductivity.cpp@{conductivity.cpp}!clearCalibConductivity@{clearCalibConductivity}}
+\index{clearCalibConductivity@{clearCalibConductivity}!conductivity.cpp@{conductivity.cpp}}
+\doxysubsubsection{\texorpdfstring{clearCalibConductivity()}{clearCalibConductivity()}}
+{\footnotesize\ttfamily void clear\+Calib\+Conductivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the conductivity calibration from the EEPROM. 
+
+\mbox{\Hypertarget{conductivity_8cpp_af32a1e269f99455dc26a227d9384eff2}\label{conductivity_8cpp_af32a1e269f99455dc26a227d9384eff2}} 
+\index{conductivity.cpp@{conductivity.cpp}!getConductivity@{getConductivity}}
+\index{getConductivity@{getConductivity}!conductivity.cpp@{conductivity.cpp}}
+\doxysubsubsection{\texorpdfstring{getConductivity()}{getConductivity()}}
+{\footnotesize\ttfamily float get\+Conductivity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the conductivity value. 
+
+\begin{DoxyReturn}{Returns}
+float conductivity in pH 
+\end{DoxyReturn}
+\mbox{\Hypertarget{conductivity_8cpp_a5fb122419e7d12738cf0d9d1bed89b65}\label{conductivity_8cpp_a5fb122419e7d12738cf0d9d1bed89b65}} 
+\index{conductivity.cpp@{conductivity.cpp}!initConductivity@{initConductivity}}
+\index{initConductivity@{initConductivity}!conductivity.cpp@{conductivity.cpp}}
+\doxysubsubsection{\texorpdfstring{initConductivity()}{initConductivity()}}
+{\footnotesize\ttfamily void init\+Conductivity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the conductivity sensor. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{conductivity_8cpp_aa6393e463b3a2936a0bcecd122820671}\label{conductivity_8cpp_aa6393e463b3a2936a0bcecd122820671}} 
+\index{conductivity.cpp@{conductivity.cpp}!conductivity@{conductivity}}
+\index{conductivity@{conductivity}!conductivity.cpp@{conductivity.cpp}}
+\doxysubsubsection{\texorpdfstring{conductivity}{conductivity}}
+{\footnotesize\ttfamily float conductivity}
+
+\mbox{\Hypertarget{conductivity_8cpp_a9b0cbf14fe27e711898c9bc24da8b4fa}\label{conductivity_8cpp_a9b0cbf14fe27e711898c9bc24da8b4fa}} 
+\index{conductivity.cpp@{conductivity.cpp}!ec@{ec}}
+\index{ec@{ec}!conductivity.cpp@{conductivity.cpp}}
+\doxysubsubsection{\texorpdfstring{ec}{ec}}
+{\footnotesize\ttfamily DFRobot\+\_\+\+EC10 ec}
+

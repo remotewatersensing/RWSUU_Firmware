@@ -1,0 +1,85 @@
+\hypertarget{storage_8cpp}{}\doxysection{src/storage.cpp File Reference}
+\label{storage_8cpp}\index{src/storage.cpp@{src/storage.cpp}}
+{\ttfamily \#include $<$storage.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdata}{data}}
+\begin{DoxyCompactList}\small\item\em Structure to save the binary data The structure is as described in \href{https://github.com/remotewatersensing/RWSUU-Diagrams/raw/main/diagrams/Datastructure.png}{\texttt{ https\+://github.\+com/remotewatersensing/\+RWSUU-\/\+Diagrams/raw/main/diagrams/\+Datastructure.\+png}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{storage_8cpp_a12027713ca0b03891436c4526266f594}{init\+SD}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the SD card. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{storage_8cpp_a07e442e91a72c02f7354b31136d43b4f}{create\+File}} ()
+\begin{DoxyCompactList}\small\item\em Create a new file with a new filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{storage_8cpp_a622ab97643859a9bb5887adb13cbd732}{log\+File}} (uint8\+\_\+t id, float val)
+\begin{DoxyCompactList}\small\item\em Log data with timestamp to opened file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+File \mbox{\hyperlink{storage_8cpp_ac8506904f7b32febfb36651629dfe86c}{logfile}}
+\item 
+char \mbox{\hyperlink{storage_8cpp_a380c20bc893f367aa75e1a2f6f545044}{filename}} \mbox{[}13\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{storage_8cpp_a07e442e91a72c02f7354b31136d43b4f}\label{storage_8cpp_a07e442e91a72c02f7354b31136d43b4f}} 
+\index{storage.cpp@{storage.cpp}!createFile@{createFile}}
+\index{createFile@{createFile}!storage.cpp@{storage.cpp}}
+\doxysubsubsection{\texorpdfstring{createFile()}{createFile()}}
+{\footnotesize\ttfamily bool create\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new file with a new filename. 
+
+\begin{DoxyReturn}{Returns}
+if file has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{storage_8cpp_a12027713ca0b03891436c4526266f594}\label{storage_8cpp_a12027713ca0b03891436c4526266f594}} 
+\index{storage.cpp@{storage.cpp}!initSD@{initSD}}
+\index{initSD@{initSD}!storage.cpp@{storage.cpp}}
+\doxysubsubsection{\texorpdfstring{initSD()}{initSD()}}
+{\footnotesize\ttfamily bool init\+SD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the SD card. 
+
+\begin{DoxyReturn}{Returns}
+if SD has been successfully initialized 
+\end{DoxyReturn}
+\mbox{\Hypertarget{storage_8cpp_a622ab97643859a9bb5887adb13cbd732}\label{storage_8cpp_a622ab97643859a9bb5887adb13cbd732}} 
+\index{storage.cpp@{storage.cpp}!logFile@{logFile}}
+\index{logFile@{logFile}!storage.cpp@{storage.cpp}}
+\doxysubsubsection{\texorpdfstring{logFile()}{logFile()}}
+{\footnotesize\ttfamily void log\+File (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Log data with timestamp to opened file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the sensor id (see \mbox{\hyperlink{defines_8h}{defines.\+h}}) \\
+\hline
+{\em val} & the sensor value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{storage_8cpp_a380c20bc893f367aa75e1a2f6f545044}\label{storage_8cpp_a380c20bc893f367aa75e1a2f6f545044}} 
+\index{storage.cpp@{storage.cpp}!filename@{filename}}
+\index{filename@{filename}!storage.cpp@{storage.cpp}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily char filename\mbox{[}13\mbox{]}}
+
+\mbox{\Hypertarget{storage_8cpp_ac8506904f7b32febfb36651629dfe86c}\label{storage_8cpp_ac8506904f7b32febfb36651629dfe86c}} 
+\index{storage.cpp@{storage.cpp}!logfile@{logfile}}
+\index{logfile@{logfile}!storage.cpp@{storage.cpp}}
+\doxysubsubsection{\texorpdfstring{logfile}{logfile}}
+{\footnotesize\ttfamily File logfile}
+

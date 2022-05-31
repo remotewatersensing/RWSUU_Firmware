@@ -1,0 +1,152 @@
+\hypertarget{rtc_8h}{}\doxysection{include/rtc.h File Reference}
+\label{rtc_8h}\index{include/rtc.h@{include/rtc.h}}
+
+
+Controls the RTC.  
+
+
+{\ttfamily \#include $<$defines.\+h$>$}\newline
+{\ttfamily \#include $<$DS1307\+RTC.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8h_a6eacf217a10e49ebc7c69f35166de7da}{get\+Day}} ()
+\begin{DoxyCompactList}\small\item\em Get the Day object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8h_af6189dde521536bad801a8b15bc4b382}{get\+Month}} ()
+\begin{DoxyCompactList}\small\item\em Get the Month object. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{rtc_8h_ae10acb70ac489f75b09042368987d2c2}{get\+Year}} ()
+\begin{DoxyCompactList}\small\item\em Get the Year object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8h_a813e20818b97bf9fff8e99d98130f91f}{get\+Hour}} ()
+\begin{DoxyCompactList}\small\item\em Get the Hour object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8h_af5f4fde550ced44e2b885b471e51b11c}{get\+Minute}} ()
+\begin{DoxyCompactList}\small\item\em Get the Minute object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8h_a850533e7af799a4886a433c6a1271ee9}{get\+Second}} ()
+\begin{DoxyCompactList}\small\item\em Get the Second object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8h_abd58292a27d4c24cbb49bfc262ba3e69}{get\+Digits}} (int number)
+\item 
+bool \mbox{\hyperlink{rtc_8h_aaa76e4b8e5177426a2d666d35bd7d348}{init\+RTC}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the RTC Extract the date and time from the compiler and write it to the RTC if available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8h_abf15dc9fc377385363c8ed3be7781ef2}{read\+RTC}} ()
+\begin{DoxyCompactList}\small\item\em Reads from the RTC and puts it in the tm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the RTC. 
+
+\begin{DoxyAuthor}{Author}
+Robin Westerik 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8h_a6eacf217a10e49ebc7c69f35166de7da}\label{rtc_8h_a6eacf217a10e49ebc7c69f35166de7da}} 
+\index{rtc.h@{rtc.h}!getDay@{getDay}}
+\index{getDay@{getDay}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getDay()}{getDay()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Day object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t calendar day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_abd58292a27d4c24cbb49bfc262ba3e69}\label{rtc_8h_abd58292a27d4c24cbb49bfc262ba3e69}} 
+\index{rtc.h@{rtc.h}!getDigits@{getDigits}}
+\index{getDigits@{getDigits}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getDigits()}{getDigits()}}
+{\footnotesize\ttfamily void get\+Digits (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rtc_8h_a813e20818b97bf9fff8e99d98130f91f}\label{rtc_8h_a813e20818b97bf9fff8e99d98130f91f}} 
+\index{rtc.h@{rtc.h}!getHour@{getHour}}
+\index{getHour@{getHour}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getHour()}{getHour()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Hour object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t hour 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_af5f4fde550ced44e2b885b471e51b11c}\label{rtc_8h_af5f4fde550ced44e2b885b471e51b11c}} 
+\index{rtc.h@{rtc.h}!getMinute@{getMinute}}
+\index{getMinute@{getMinute}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getMinute()}{getMinute()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Minute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Minute object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t minute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_af6189dde521536bad801a8b15bc4b382}\label{rtc_8h_af6189dde521536bad801a8b15bc4b382}} 
+\index{rtc.h@{rtc.h}!getMonth@{getMonth}}
+\index{getMonth@{getMonth}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getMonth()}{getMonth()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Month object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t calendar month 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_a850533e7af799a4886a433c6a1271ee9}\label{rtc_8h_a850533e7af799a4886a433c6a1271ee9}} 
+\index{rtc.h@{rtc.h}!getSecond@{getSecond}}
+\index{getSecond@{getSecond}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getSecond()}{getSecond()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Second (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Second object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t second 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_ae10acb70ac489f75b09042368987d2c2}\label{rtc_8h_ae10acb70ac489f75b09042368987d2c2}} 
+\index{rtc.h@{rtc.h}!getYear@{getYear}}
+\index{getYear@{getYear}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily uint16\+\_\+t get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Year object. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t calendar year 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_aaa76e4b8e5177426a2d666d35bd7d348}\label{rtc_8h_aaa76e4b8e5177426a2d666d35bd7d348}} 
+\index{rtc.h@{rtc.h}!initRTC@{initRTC}}
+\index{initRTC@{initRTC}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{initRTC()}{initRTC()}}
+{\footnotesize\ttfamily bool init\+RTC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the RTC Extract the date and time from the compiler and write it to the RTC if available. 
+
+\begin{DoxyReturn}{Returns}
+if RTC was able to extract a new date and time from the compiler 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_abf15dc9fc377385363c8ed3be7781ef2}\label{rtc_8h_abf15dc9fc377385363c8ed3be7781ef2}} 
+\index{rtc.h@{rtc.h}!readRTC@{readRTC}}
+\index{readRTC@{readRTC}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{readRTC()}{readRTC()}}
+{\footnotesize\ttfamily bool read\+RTC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads from the RTC and puts it in the tm. 
+
+\begin{DoxyReturn}{Returns}
+if no errors 
+\end{DoxyReturn}

@@ -1,0 +1,53 @@
+\hypertarget{main_8h}{}\doxysection{include/main.h File Reference}
+\label{main_8h}\index{include/main.h@{include/main.h}}
+
+
+Contains the main setup and loop.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$turbidity.\+h$>$}\newline
+{\ttfamily \#include $<$conductivity.\+h$>$}\newline
+{\ttfamily \#include $<$acidity.\+h$>$}\newline
+{\ttfamily \#include $<$temperature.\+h$>$}\newline
+{\ttfamily \#include $<$storage.\+h$>$}\newline
+{\ttfamily \#include $<$rtc.\+h$>$}\newline
+{\ttfamily \#include $<$defines.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8h_a7dfd9b79bc5a37d7df40207afbc5431f}{setup}} (void)
+\begin{DoxyCompactList}\small\item\em Setting up the peripherals It initializes the sensors, initializes the real time clock, and creates a new file on the SD card where files can be logged. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8h_a0b33edabd7f1c4e4a0bf32c67269be2f}{loop}} (void)
+\begin{DoxyCompactList}\small\item\em Main loop that logs the sensor values to the SD card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the main setup and loop. 
+
+\begin{DoxyAuthor}{Author}
+Robin Westerik 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_a0b33edabd7f1c4e4a0bf32c67269be2f}\label{main_8h_a0b33edabd7f1c4e4a0bf32c67269be2f}} 
+\index{main.h@{main.h}!loop@{loop}}
+\index{loop@{loop}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Main loop that logs the sensor values to the SD card. 
+
+\mbox{\Hypertarget{main_8h_a7dfd9b79bc5a37d7df40207afbc5431f}\label{main_8h_a7dfd9b79bc5a37d7df40207afbc5431f}} 
+\index{main.h@{main.h}!setup@{setup}}
+\index{setup@{setup}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Setting up the peripherals It initializes the sensors, initializes the real time clock, and creates a new file on the SD card where files can be logged. 
+
