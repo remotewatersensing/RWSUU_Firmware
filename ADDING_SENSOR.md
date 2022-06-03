@@ -15,4 +15,4 @@ This function is called in the loop and should return a float. If you are debugg
 4. A sensor ID in defines.h to indicate what sensor you are talking about
 This ID has to be unique and sequential from the rest of the IDs. It is used when saving to the binary file and converting it back to a csv file.
 
-If you have implemented the sensor, please proceed to update RWSUU_DAT2CSV with the new sensor ID at the string array: sensorId
+If you have implemented the sensor, please proceed to update RWSUU_DAT2CSV and RWSUU_Controller with the new sensor ID at the string array: sensorId
